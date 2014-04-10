@@ -17,12 +17,6 @@ class Comment extends Entity
         'author_id' => 'required|exists:users,id',
     ];
 
-    protected $laravelVersions = [
-        0 => "Doesn't Matter",
-        3 => "Laravel 3.x",
-        4 => "Laravel 4.x",
-    ];
-
     const TYPE_FORUM   = 0;
     const TYPE_PASTE   = 1;
     const TYPE_ARTICLE = 2;
@@ -61,11 +55,6 @@ class Comment extends Entity
     {
         //$body = \App::make('Lio\Markdown\HtmlMarkdownConvertor')->convertHtmlToMarkdown($content);
         $this->attributes['body'] = $content;
-    }
-
-    public function getLaravelVersions()
-    {
-        return $this->laravelVersions;
     }
 
     public function isManageableBy(\Lio\Accounts\User $user)

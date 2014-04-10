@@ -10,12 +10,12 @@
         </div>
 
         @if($thread->isReplyTheSolution($reply))
-            <div class="solution accepted"><i class="fa fa-check-square"></i> Solution</div>
+            <div class="solution accepted"><i class="fa fa-check-square"></i> {{ trans('forum.threads.solution') }}</div>
         @endif
 
         @if($thread->isQuestion() && $thread->isManageableBy($currentUser))
             @if( ! $thread->isSolved())
-                <a class="solution" href="{{ $thread->markAsSolutionUrl($reply->id) }}"><i class="fa fa-check-square"></i>Mark as Solution</a>
+                <a class="solution" href="{{ $thread->markAsSolutionUrl($reply->id) }}"><i class="fa fa-check-square"></i>{{ trans('forum.threads.mark-as-solution') }}</a>
             @endif
         @endif
 
@@ -29,11 +29,11 @@
         <div class="admin-bar">
             <ul>
             @if($reply->isManageableBy($currentUser))
-                <li><a href="{{ action('ForumRepliesController@getEditReply', [$reply->id]) }}">Edit</a></li>
-                <li><a href="{{ action('ForumRepliesController@getDelete', [$reply->id]) }}">Delete</a></li>
+                <li><a href="{{ action('ForumRepliesController@getEditReply', [$reply->id]) }}">{{ trans('forum.threads.edit') }}</a></li>
+                <li><a href="{{ action('ForumRepliesController@getDelete', [$reply->id]) }}">{{ trans('forum.threads.delete') }}</a></li>
             @endif
                 <li class="space"></li>
-                <li><a href="#" class="quote _quote_forum_post">Quote</a></li>
+                <li><a href="#" class="quote _quote_forum_post">{{ trans('forum.threads.quote') }}</a></li>
             </ul>
         </div>
     @endif

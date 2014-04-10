@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <!--[if IE 8]>               <html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="{{ Config::get('app.locale') }}" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>{{ ! empty($title) ? $title . ' - ' : '' }}Laravel.IO - The Official Laravel PHP Framework Community Portal</title>
-
+  <title>{{ ! empty($title) ? $title . ' - ' : '' }}{{ trans('app.title-suffix') }}</title>
   @section('styles')
     <link rel="stylesheet" href="{{ asset('stylesheets/app.css') }}">
   @show

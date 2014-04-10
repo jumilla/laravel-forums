@@ -48,9 +48,9 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'lio_development',
-			'username'  => 'root',
-			'password'  => 'password',
+			'database'  => 'laravel-forums',
+			'username'  => 's2',
+			'password'  => '2012',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

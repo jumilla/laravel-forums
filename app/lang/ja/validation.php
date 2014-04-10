@@ -13,56 +13,56 @@ return array(
 	|
 	*/
 
-	"accepted"         => "The :attribute must be accepted.",
-	"active_url"       => "The :attribute is not a valid URL.",
-	"after"            => "The :attribute must be a date after :date.",
-	"alpha"            => "The :attribute may only contain letters.",
-	"alpha_dash"       => "The :attribute may only contain letters, numbers, and dashes.",
-	"alpha_num"        => "The :attribute may only contain letters and numbers.",
-	"before"           => "The :attribute must be a date before :date.",
-	"between"          => array(
-		"numeric" => "The :attribute must be between :min - :max.",
-		"file"    => "The :attribute must be between :min - :max kilobytes.",
-		"string"  => "The :attribute must be between :min - :max characters.",
-	),
-	"confirmed"        => "The :attribute confirmation does not match.",
-	"date"             => "The :attribute is not a valid date.",
-	"date_format"      => "The :attribute does not match the format :format.",
-	"different"        => "The :attribute and :other must be different.",
-	"digits"           => "The :attribute must be :digits digits.",
-	"digits_between"   => "The :attribute must be between :min and :max digits.",
-	"email"            => "The :attribute format is invalid.",
-	"exists"           => "The selected :attribute is invalid.",
-	"image"            => "The :attribute must be an image.",
-	"in"               => "The selected :attribute is invalid.",
-	"integer"          => "The :attribute must be an integer.",
-	"ip"               => "The :attribute must be a valid IP address.",
-	"max"              => array(
-		"numeric" => "The :attribute may not be greater than :max.",
-		"file"    => "The :attribute may not be greater than :max kilobytes.",
-		"string"  => "The :attribute may not be greater than :max characters.",
-	),
-	"mimes"            => "The :attribute must be a file of type: :values.",
-	"min"              => array(
-		"numeric" => "The :attribute must be at least :min.",
-		"file"    => "The :attribute must be at least :min kilobytes.",
-		"string"  => "The :attribute must be at least :min characters.",
-	),
-	"not_in"           => "The selected :attribute is invalid.",
-	"numeric"          => "The :attribute must be a number.",
-	"regex"            => "The :attribute format is invalid.",
-	"required"         => "The :attribute field is required.",
-	"required_if"      => "The :attribute field is required when :other is :value.",
-	"required_with"    => "The :attribute field is required when :values is present.",
-	"required_without" => "The :attribute field is required when :values is not present.",
-	"same"             => "The :attribute and :other must match.",
-	"size"             => array(
-		"numeric" => "The :attribute must be :size.",
-		"file"    => "The :attribute must be :size kilobytes.",
-		"string"  => "The :attribute must be :size characters.",
-	),
-	"unique"           => "The :attribute has already been taken.",
-	"url"              => "The :attribute format is invalid.",
+	"accepted"         => ":attributeが確認されていません。",
+	"active_url"       => ":attributeは無効なURLです。",
+	"after"            => ":attributeは:dateより後の日付でなければなりません。",
+	"alpha"            => ":attributeにはアルファベット以外使用できません。",
+	"alpha_dash"       => ":attributeにはアルファベット、数字、ハイフン、アンダーバー以外使用できません。",
+	"alpha_num"        => ":attributeにはアルファベット、数字以外使用できません。",
+	"before"           => ":attributeは:dateより前の日付でなければなりません。",
+	"between"          => [
+		"numeric" => ":attributeは:min～:maxの範囲である必要があります。",
+		"file"    => ":attributeのファイルサイズは:min～:maxキロバイトの範囲である必要があります。",
+		"string"  => ":attributeの長さは:min～:max文字の範囲である必要があります。",
+	],
+	"confirmed"        => ":attributeは確認欄と一致しませんでした。",
+	"date"             => ":attributeは正しい日付ではありません。",
+	"date_format"      => ":attributeは:format形式ではありません。",
+	"different"        => ":attributeと:otherは異なる必要があります。",
+	"digits"           => ":attributeは:digits桁である必要があります。",
+	"digits_between"   => ":attributeは:min～:max桁の範囲である必要があります。",
+	"email"            => ":attributeは正しいメールアドレスではありません。",
+	"exists"           => "選択された:attributeは存在しませんでした。",
+	"image"            => ":attributeは画像ファイルである必要があります。",
+	"in"               => "選択された:attributeは正しくありません。",
+	"integer"          => ":attributeは整数である必要があります。",
+	"ip"               => ":attributeは正しいIPアドレスではありません。",
+	"max"              => [
+		"numeric" => ":attributeは:max以下である必要があります。",
+		"file"    => ":attributeのファイルサイズは:maxキロバイト以下である必要があります。",
+		"string"  => ":attributeの長さは:max文字以下である必要があります。",
+	],
+	"mimes"            => ":attributeのファイル種別は:valuesである必要があります。",
+	"min"              => [
+		"numeric" => ":attributeは:min以上である必要があります。",
+		"file"    => ":attributeのファイルサイズは:minキロバイト以上である必要があります。",
+		"string"  => ":attributeの長さは :min文字以上である必要があります。",
+	],
+	"not_in"           => "選択された:attributeは正しくありません。",
+	"numeric"          => ":attributeは数値である必要があります。",
+	"regex"            => ":attributeの形式は正しくありません。",
+	"required"         => ":attributeは必須です。",
+	"required_if"      => ":otherが:valueである場合、:attributeは必須です。",
+	"required_with"    => ":valuesが指定されている場合、:attributeは必須です。",
+	"required_without" => ":valuesが指定されていない場合、:attributeは必須です。",
+	"same"             => ":attributeと:otherが一致しません。",
+	"size"             => [
+		"numeric" => ":attributeは:sizeである必要があります。",
+		"file"    => ":attributeのファイルサイズは:sizeキロバイトである必要があります。",
+		"string"  => ":attributeの長さは:size文字である必要があります。",
+	],
+	"unique"           => ":attributeはすでに使われています。",
+	"url"              => ":attributeは正しいURL形式ではありません。",
 
 	/*
 	|--------------------------------------------------------------------------
@@ -77,8 +77,8 @@ return array(
 
 	'custom' => [
 		'tags' => [
-			'required' => 'You must choose at least one tag.',
-			'max_tags' => 'You may not use more than 3 tags.',
+			'required' => 'タグを1つ選択してください。',
+			'max_tags' => 'タグは3つまでにしてください。',
 		],
 	],
 
@@ -93,6 +93,6 @@ return array(
 	|
 	*/
 
-	'attributes' => array(),
+	'attributes' => [],
 
 );

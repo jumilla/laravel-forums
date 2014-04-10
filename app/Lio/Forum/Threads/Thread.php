@@ -19,12 +19,6 @@ class Thread extends Entity
         'author_id' => 'required|exists:users,id',
     ];
 
-    protected $laravelVersions = [
-        4 => "Laravel 4.x",
-        3 => "Laravel 3.x",
-        0 => "Doesn't Matter",
-    ];
-
     public function author()
     {
         return $this->belongsTo('Lio\Accounts\User', 'author_id');
@@ -99,11 +93,6 @@ class Thread extends Entity
         }
 
         return \Str::slug("{$date} - {$this->subject}" . $i);
-    }
-
-    public function getLaravelVersions()
-    {
-        return $this->laravelVersions;
     }
 
     public function isQuestion()

@@ -20,7 +20,7 @@ return [
         'Database / Eloquent' => [
             'tags' => 'database,eloquent'
         ],
-        'Packages / IoC ' => [
+        'Packages / IoC' => [
             'tags' => 'packages,ioc'
         ],
         'Views / Blade / Forms' => [
@@ -32,8 +32,38 @@ return [
         'Local Community Meetups' => [
             'tags' => 'meetups'
         ],
-        'Laravel.io Site and Community' => [
-            'tags'  => 'laravelio',
+        'Site and Community' => [
+            'tags'  => 'laraveljp',
         ]
+    ],
+
+    'tags' => [
+        'common' => [
+            'Installation',
+            'Configuration',
+            'Authentication',
+            'Security',
+            'Requests',
+            'Input',
+            'Session',
+            'Cache',
+            'Database',
+            'Eloquent',
+            'IoC',
+            'Views',
+            'Blade',
+            'Forms',
+            'Validation',
+            'Mail',
+            'Queues',
+            'Packages',
+            'OOP',
+            'Testing',
+            'Meetups',
+            'LaravelJP',
+        ],
+        'article' => [
+            'News',
+        ],
     ],
 ];

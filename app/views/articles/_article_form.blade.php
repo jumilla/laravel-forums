@@ -12,7 +12,7 @@
             </div>
 
             <div class="form-row">
-                {{ Form::label('laravel_version', 'Laravel Version', ['class' => 'field-title']) }}
+                {{ Form::label('laravel_version', 'Laravel '.trans('forum.threads.version'), ['class' => 'field-title']) }}
                 <ul class="version">
                     @foreach($versions as $value => $version)
                         <li>

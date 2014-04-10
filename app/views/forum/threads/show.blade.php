@@ -7,7 +7,7 @@
 @section('content')
     <div class="forum">
         <div class="header">
-            <h2>Forum</h2>
+            <h2>{{ trans('app.forum') }}</h2>
             <div class="tags">
                 {{ $thread->tags->getTagList() }}
             </div>
@@ -30,7 +30,7 @@
         @include('forum.replies._create')
     @else
         <div class="login-cta">
-            <p>Want to reply to this thread?</p> <a class="button" href="{{ action('AuthController@getLogin') }}">Login with github.</a>
+            <p>{{ trans('forum.threads.reply-suggest') }}</p> <a class="button" href="{{ action('AuthController@getLogin') }}">{{ trans('app.login') }}</a>
         </div>
     @endif
 @stop

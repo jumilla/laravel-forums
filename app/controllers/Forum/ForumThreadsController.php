@@ -66,7 +66,7 @@ class ForumThreadsController extends BaseController implements
 
         $this->createSections($thread->getTags());
 
-        $this->title = ($thread->isSolved() ? '[SOLVED] ' : '') . $thread->subject;
+        $this->title = ($thread->isSolved() ? trans('app.title-prefix-solved') : '') . $thread->subject;
         $this->view('forum.threads.show', compact('thread', 'replies'));
     }
 
@@ -74,7 +74,7 @@ class ForumThreadsController extends BaseController implements
     public function getCreateThread()
     {
         $tags = $this->tags->getAllForForum();
-        $versions = $this->threads->getNew()->getLaravelVersions();
+        $versions = trans('forum.threads.versions');
         $this->createSections(Input::get('tags'));
 
         $this->title = "Create Forum Thread";
@@ -113,7 +113,7 @@ class ForumThreadsController extends BaseController implements
         }
 
         $tags = $this->tags->getAllForForum();
-        $versions = $thread->getLaravelVersions();
+        $versions = trans('forum.threads.versions');
 
         $this->createSections(Input::get('tags'));
 

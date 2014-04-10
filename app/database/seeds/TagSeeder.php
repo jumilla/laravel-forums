@@ -13,52 +13,29 @@ class TagSeeder extends Seeder
 
     private function createTags()
     {
-        $commonTags = [
-            'Installation' => 'framework installation, package installation, application installation',
-            'Configuration' => 'framework configuration, web-server configuration, application configuration',
-            'Authentication' => 'topics related to authentication, including user logins, oauth, etc',
-            'Security' => 'code safety, user roles and authorization',
-            'Requests' => 'information related to handling requests',
-            'Input' => 'handling user input',
-            'Session' => 'persisting data between requests using PHP or Laravel sessions',
-            'Cache' => 'performance caching or any use of Laravel\'s cache system',
-            'Database' => 'query-building, connections, or drivers',
-            'Eloquent' => 'Eloquent modeling, relationships, etc',
-            'Ioc' => 'binding to and resolving from the IoC container',
-            'Views' => 'topics related to the rendering of views',
-            'Blade' => 'topics related to Blade templating',
-            'Forms' => 'topics related to forms',
-            'Validation' => 'topics related to the validation of data',
-            'Mail' => 'topics related to compiling and sending email',
-            'Queues' => 'topics related to queues',
-            'LaravelIO' => 'topics that relate to the Laravel.io site or community',
-            'Packages' => 'topics related to creating, discussing, and importing packages',
-            'Meetups' => 'topics related to community meetups or user groups',
-            'OOP' => 'topics related to writing good object-oriented code',
-            'Testing' => 'topics related to automated testing',
-        ];
+        $commonTags = Config::get('forum.tags.common');
 
-        foreach ($commonTags as $name => $description) {
+        foreach ($commonTags as $name) {
+            $tagStrings = trans('forum.tags.'.$name);
             Tag::create([
-                'name' => $name,
+                'name' => $tagStrings['title'],
                 'slug' => $name,
-                'description' => $description,
-                'articles' => 1,
+                'description' => $tagStrings['description'],
                 'forum' => 1,
+                'articles' => 1,
             ]);
         }
 
-        $articleTags = [
-            'News' => 'information about an occurance',
-        ];
+        $articleTags = Config::get('forum.tags.article');
 
-        foreach ($articleTags as $name => $description) {
+        foreach ($articleTags as $name) {
+            $tagStrings = trans('forum.tags.'.$name);
             Tag::create([
-                'name' => $name,
+                'name' => $tagStrings['title'],
                 'slug' => $name,
-                'description' => $description,
-                'articles' => 1,
+                'description' => $tagStrings['description'],
                 'forum' => 0,
+                'articles' => 1,
             ]);
         }
     }

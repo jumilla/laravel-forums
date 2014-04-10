@@ -25,9 +25,10 @@
     }
 
     .logo {
-        padding: 15px 0 15px 5px;
+        padding: 0;
         margin: auto;
-        width:125px;
+        width: 96px;
+        height: 96px;
     }
 }
 
@@ -50,8 +51,9 @@
     .top-header {
         .logo {
             float: left;
-            padding: 15px 0 15px 5px;
-            width:125px;
+            padding: 0;
+            width: 96px;
+            height: 96px;
         }
 
         header {

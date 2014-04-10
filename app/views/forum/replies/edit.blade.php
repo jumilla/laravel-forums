@@ -12,14 +12,14 @@
     <div class="reply-form">
         {{ Form::model($reply->resource) }}
             <div class="form-row">
-                <label class="field-title">Reply</label>
+                <label class="field-title">{{ trans('forum.threads.reply') }}</label>
                 {{ Form::textarea("body", null, ['class' => '_tab_indent']) }}
                 {{ $errors->first('body', '<small class="error">:message</small>') }}
                 <small><a href="http://laravel.io/forum/01-31-2014-how-to-mark-up-forum-posts" target="_BLANK">Learn how to mark up your post here.</a></small>
             </div>
 
             <div class="form-row">
-                {{ Form::button('Reply', ['type' => 'submit', 'class' => 'button']) }}
+                {{ Form::button(trans('forum.threads.reply'), ['type' => 'submit', 'class' => 'button']) }}
             </div>
         {{ Form::close() }}
     </div>

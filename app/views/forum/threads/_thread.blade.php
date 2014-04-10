@@ -18,16 +18,16 @@
     <div class="admin-bar">
         <ul>
         @if($thread->isManageableBy($currentUser))
-            <li><a href="{{ $thread->editUrl }}">Edit</a></li>
-            <li><a href="{{ $thread->deleteUrl }}">Delete</a></li>
+            <li><a href="{{ $thread->editUrl }}">{{ trans('forum.threads.edit') }}</a></li>
+            <li><a href="{{ $thread->deleteUrl }}">{{ trans('forum.threads.delete') }}</a></li>
             @if($thread->isQuestion() && $thread->isSolved())
-                <li><a href="{{ $thread->markAsUnsolvedUrl }}">Mark Unsolved</a></li>
+                <li><a href="{{ $thread->markAsUnsolvedUrl }}">{{ trans('forum.threads.mark-unresolved') }}</a></li>
             @endif
         @endif
 
         @if(Auth::user())
             <li class="space"></li>
-            <li><a href="#" class="quote _quote_forum_post">Quote</a></li>
+            <li><a href="#" class="quote _quote_forum_post">{{ trans('forum.threads.quote') }}</a></li>
         @endif
         </ul>
     </div>

@@ -40,7 +40,7 @@
             <div class="padding">
                 {{ Form::open(['action' => 'ForumThreadsController@getSearch', 'method' => 'GET']) }}
                     <div class="form-row">
-                        {{ Form::label('query', 'Search the laravel.io forum', ['class' => 'field-title']) }}
+                        {{ Form::label('query', trans('forum.search.placeholder'), ['class' => 'field-title']) }}
                         {{ Form::text('query', null, ['placeholder' => 'search the laravel.io forum'] )}}
                     </div>
                     <div class="form-row">
