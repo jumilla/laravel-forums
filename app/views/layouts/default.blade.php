@@ -4,6 +4,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
+  <meta property="og:title" content="Laravel Forum JP" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:description" content="{{ trans('layouts.main.description') }}" />
+  <meta name="description" content="{{ trans('layouts.main.description') }}">
+  <meta name="author" content="">
+  <meta name="keywords" content="{{ trans('layouts.main.keywords') }}">
   <title>{{ ! empty($title) ? $title . ' - ' : '' }}{{ trans('app.title-suffix') }}</title>
   @section('styles')
     <link rel="stylesheet" href="{{ asset('stylesheets/app.css') }}">
